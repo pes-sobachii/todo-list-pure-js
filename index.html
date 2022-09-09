@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,22 @@
    <link rel="stylesheet" href="style.css">
    <title>Document</title>
 </head>
+
 <body>
-   <div class="main-wrapper">
+   <div class="container">
       <section class="input-block">
-         <div class="container">
-            <h1 class="input-block__title">The Todo App on a pure JS</h1>
-            <form class="input-form">
-               <input type="text">
-               <button type="submit"></button>
-            </form>
-         </div>
+         <h1 class="input-block__title">The Todo App on a pure JS</h1>
+         <form class="input-form">
+            <input class="input-block__input" type="text">
+            <button class="input-block__submit" type="submit">Add</button>
+         </form>
       </section>
       <section class="list-block">
-         <div class="container">
-            <ul class="todo-list">
+         <ul class="todo-list">
 
-            </ul>
-         </div>
+         </ul>
       </section>
    </div>
 </body>
+<script src="index.js"></script>
 </html>

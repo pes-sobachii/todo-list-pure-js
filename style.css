@@ -24,6 +24,11 @@ html,body{
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 24px;
+   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_ljPqrvYc8oipWxLO0umRXpEtOBB-HZk7A&usqp=CAU');
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 input,button,textarea{font-family:inherit;}
 
@@ -36,3 +41,34 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+
+.input-block{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 15px;
+   overflow: hidden;
+}
+.input-form {
+   display: flex;
+   align-items: center;
+}
+
+.input-form input{
+   flex: 1 1 auto;
+}
+
+.input-form input{
+   flex: 0 0 35%;
+}
+.list-block {
+}
+.todo-list {
+}
