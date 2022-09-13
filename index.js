@@ -10,8 +10,8 @@ function submitHandler(e) {
    todoListItem.classList.add('todo-list__item')
    todoListItem.innerHTML=`
    <li class="todo-list__item-text">${todoInput.value}</li>
-   <button class="todo-list__item-delete-button">d</button>
-   <button class="todo-list__item-complete-button">c</button>`
+   <button class="todo-list__item-delete-button todo-button">d</button>
+   <button class="todo-list__item-complete-button todo-button">c</button>`
    todoList.append(todoListItem)
    todoInput.value = ''
 }
