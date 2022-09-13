@@ -94,6 +94,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
    display: flex;
    overflow: hidden;
    margin-bottom: 20px;
+   transition: opacity .3s ease;
 }
 
 .todo-list__item-text{
@@ -103,4 +104,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .todo-button{
    flex: 0 0 10%;
+}
+
+.completed{
+   opacity: 0.3
+}
+
+.completed li{
+   text-decoration: line-through;
+}
+
+.disappear{
+   opacity: 0;
 }
