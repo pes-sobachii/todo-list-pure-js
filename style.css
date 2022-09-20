@@ -1,61 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
 }
-*,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
+:focus,
+:active {
+   outline: none;
+}
 
-html,body{
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
    font-family: 'Montserrat', sans-serif;
    font-size: 24px;
    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_ljPqrvYc8oipWxLO0umRXpEtOBB-HZk7A&usqp=CAU');
    background-repeat: no-repeat;
    background-size: cover;
 }
-input,button,textarea{font-family:inherit;}
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;background-color: inherit;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
+input,
+button,
+textarea {
+   font-family: inherit;
+}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+   background-color: inherit;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
 
 
-.input-block{
+.input-block {
    text-align: center;
    width: 100%;
    padding: 30px;
 }
+
 .container {
    max-width: 600px;
    margin: 0 auto;
    padding: 15px;
    overflow: hidden;
 }
+
 .input-form {
-   width: 65%;
+   width: 85%;
    height: 40px;
    margin: 0 auto;
    display: flex;
@@ -65,56 +120,53 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
    border: 2px solid blueviolet;
 }
 
-.input-form input{
+.input-form input {
    flex: 1 1 auto;
    height: 100%;
    padding: 0 20px;
    background-color: white;
 }
 
-.input-form button{
+.input-form button {
    flex: 0 0 30%;
    height: 100%;
    background-color: rgb(150, 75, 225);
+   transition: all .4s ease;
 }
-.input-block__title{
+
+.input-block__title {
    padding-bottom: 40px;
 }
 
-.list-block {
-}
-.todo-list {
-   
-}
-
-.todo-list__item{
-   background-color: white;
+.todo-list__item {
+   background-color: rgba(255, 255, 255, 1);
    border-radius: 10px;
    border: 2px solid blueviolet;
    display: flex;
    overflow: hidden;
    margin-bottom: 20px;
-   transition: opacity .3s ease;
+   transition: all .3s ease;
+   width: 100%;
 }
 
-.todo-list__item-text{
+.todo-list__item-text {
    flex: 1 1 auto;
    padding: 20px;
 }
 
-.todo-button{
+.todo-button {
    flex: 0 0 10%;
 }
 
-.completed{
-   opacity: 0.3
+.completed {
+   background-color: rgba(255, 255, 255, .3);
 }
 
-.completed li{
+.completed li {
    text-decoration: line-through;
 }
 
-.disappear{
+.disappear {
    opacity: 0;
 }
 
@@ -128,17 +180,52 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
    border: 1px solid blueviolet;
    margin-top: 20px;
 }
-.filter-button{
+
+.filter-button {
    flex: 0 0 33.3%;
    border: 1px solid blueviolet;
    padding: 15px 0;
+   transition: all .4s ease;
 }
 
-.filter__all {
-
-}
-.filter__completed {
-}
-.filter__uncompleted {
+.filter-button:hover,
+.input-form button:hover {
+   background-color: rgb(117, 29, 200);
 }
 
+.todo-list__item-delete-button {
+   background-color: rgb(224, 76, 43);
+}
+
+.todo-list__item-complete-button {
+   background-color: rgb(9, 127, 237);
+}
+
+@media all and (max-width:550px) {
+   .todo-button {
+      flex: 0 0 14%;
+   }
+
+   .input-form {
+      width: 100%;
+   }
+
+   .input-block {
+      padding: 30px 15px;
+   }
+
+   .filter {
+      width: 75%;
+   }
+}
+
+@media all and (max-width:450px) {
+   .todo-button {
+      flex: 0 0 18%;
+   }
+
+   .input-form button {
+      flex: 0 1 40%;
+
+   }
+}

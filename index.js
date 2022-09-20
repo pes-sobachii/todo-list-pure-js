@@ -6,29 +6,16 @@ const filterBlock = document.querySelector('.filter')
 
 todoSubmit.addEventListener('click', submitHandler)
 todoList.addEventListener('click', todoButtonHandler)
-//filterButtons.forEach((item) => {
-//   item.addEventListener('click', filterHandler)
-//})
 filterBlock.addEventListener('click', filterHandler)
 
 function filterHandler(e){
    e.preventDefault()
-   const targetClasses = e.target.classList
-   if (targetClasses.contains('filter__completed')){
-      todoFiltration('completed')
-   } else if (targetClasses.contains('filter__uncompleted')){
-      todoFiltration('uncompleted')
-   } else {
-      todoFiltration()
-   }
-}
-
-function todoFiltration(criteria) {
+   const list = e.target.classList
    const todoItems = document.querySelectorAll('.todo-list__item')
    todoItems.forEach(element => {
-         if (criteria === 'completed' && !element.classList.contains(`completed`)){
+         if (list[0] === 'filter__completed' && !element.classList.contains(`completed`)){
             element.style.display = 'none'
-         } else if(criteria === 'uncompleted' && element.classList.contains(`completed`)){
+         } else if(list[0] === 'filter__uncompleted' && element.classList.contains(`completed`)){
             element.style.display = 'none'
          } else {
             element.style.display = 'flex'
