@@ -1,10 +1,40 @@
 const todoList = document.querySelector('.todo-list')
 const todoInput = document.querySelector('.input-block__input')
 const todoSubmit = document.querySelector('.input-block__submit')
+const filterButtons = document.querySelectorAll('.filter-button')
+const filterBlock = document.querySelector('.filter')
 
 todoSubmit.addEventListener('click', submitHandler)
 todoList.addEventListener('click', todoButtonHandler)
+//filterButtons.forEach((item) => {
+//   item.addEventListener('click', filterHandler)
+//})
+filterBlock.addEventListener('click', filterHandler)
 
+function filterHandler(e){
+   e.preventDefault()
+   const targetClasses = e.target.classList
+   if (targetClasses.contains('filter__completed')){
+      todoFiltration('completed')
+   } else if (targetClasses.contains('filter__uncompleted')){
+      todoFiltration('uncompleted')
+   } else {
+      todoFiltration()
+   }
+}
+
+function todoFiltration(criteria) {
+   const todoItems = document.querySelectorAll('.todo-list__item')
+   todoItems.forEach(element => {
+         if (criteria === 'completed' && !element.classList.contains(`completed`)){
+            element.style.display = 'none'
+         } else if(criteria === 'uncompleted' && element.classList.contains(`completed`)){
+            element.style.display = 'none'
+         } else {
+            element.style.display = 'flex'
+         }
+      });
+}
 
 function submitHandler(e) {
    e.preventDefault()

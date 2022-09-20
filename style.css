@@ -33,7 +33,7 @@ html,body{
 input,button,textarea{font-family:inherit;}
 
 input::-ms-clear{display: none;}
-button{cursor: pointer;}
+button{cursor: pointer;background-color: inherit;}
 button::-moz-focus-inner {padding:0;border:0;}
 a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
@@ -117,3 +117,28 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .disappear{
    opacity: 0;
 }
+
+.filter {
+   display: flex;
+   margin: 0 auto;
+   width: 65%;
+   border-radius: 10px;
+   overflow: hidden;
+   background-color: rgb(150, 75, 225);
+   border: 1px solid blueviolet;
+   margin-top: 20px;
+}
+.filter-button{
+   flex: 0 0 33.3%;
+   border: 1px solid blueviolet;
+   padding: 15px 0;
+}
+
+.filter__all {
+
+}
+.filter__completed {
+}
+.filter__uncompleted {
+}
+
