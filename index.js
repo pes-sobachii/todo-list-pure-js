@@ -1,7 +1,6 @@
 const todoList = document.querySelector('.todo-list')
 const todoInput = document.querySelector('.input-block__input')
 const todoSubmit = document.querySelector('.input-block__submit')
-const filterButtons = document.querySelectorAll('.filter-button')
 const filterBlock = document.querySelector('.filter')
 
 todoSubmit.addEventListener('click', submitHandler)
@@ -29,8 +28,8 @@ function submitHandler(e) {
    todoListItem.classList.add('todo-list__item')
    todoListItem.innerHTML=`
    <li class="todo-list__item-text">${todoInput.value}</li>
-   <button class="todo-list__item-delete-button todo-button">d</button>
-   <button class="todo-list__item-complete-button todo-button">c</button>`
+   <button class="todo-list__item-delete-button todo-button"><i class="fa fa-trash"></i></button>
+   <button class="todo-list__item-complete-button todo-button"><i class="fa fa-check"></i></button>`
    todoList.append(todoListItem)
    todoInput.value = ''
 }
